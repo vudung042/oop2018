@@ -1,21 +1,32 @@
 package week1;
 
+
 public class StudentManagement {
 
     // TODO: khai báo thuộc tính students là array chứa các đối tượng thuộc lớp Student (max. 100)
+    Student[] students = new Student[100];
 
-
-    public boolean sameGroup(Student s1, Student s2) {
+    public static boolean sameGroup(Student s1, Student s2) {
         // TODO:
      return (s1.getGroup().equals(s2.getGroup()));
     }
 
     void studentsByGroup() {
         // TODO:
+
     }
 
     void removeStudent(String id) {
         // TODO:
+        int i;
+        int n = students.length;
+        for(i=0;i<n;i++){
+            if(students[i].getId().equals(id)){
+                n--;
+                for(int j=i;j<n-1;j++)  students[j] = students[j+1];
+            }
+
+        }
     }
 
     public static void main(String[] args) {
@@ -27,7 +38,7 @@ public class StudentManagement {
 
         std.setName("Duc Dung");
         std.setId("17020643");
-        std.setGroup("INT2204 8");
+        std.setGroup("INT22042");
         std.setEmail("vudung042@gmail.com");
 
        System.out.println(std.getName());
@@ -35,5 +46,9 @@ public class StudentManagement {
        std1.getInfo();
        std2.getInfo();
        std3.getInfo();
+
+       System.out.println(sameGroup(std,std2));
+       System.out.println(sameGroup(std,std3));
+       System.out.println(sameGroup(std2,std3));
     }
 }
