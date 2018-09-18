@@ -7,7 +7,7 @@ public class StudentManagement {
 
     public boolean sameGroup(Student s1, Student s2) {
         // TODO:
-        return false; // xóa dòng này sau khi cài đặt
+     return (s1.getGroup().equals(s2.getGroup()));
     }
 
     void studentsByGroup() {
@@ -22,12 +22,18 @@ public class StudentManagement {
         // TODO:
         Student std = new Student();
         Student std1 = new Student();
-        std1.setName("Duc Dung");
-        std1.setId("17020643");
-        std1.setGroup("INT2204 8");
-        std1.setEmail("vudung042@gmail.com");
+        Student std2 = new Student("Duc Dung", "17020643", "vudung042@gmail.com");
+        Student std3 = new Student(std2);
 
-       System.out.println(std1.getName());
+        std.setName("Duc Dung");
+        std.setId("17020643");
+        std.setGroup("INT2204 8");
+        std.setEmail("vudung042@gmail.com");
+
+       System.out.println(std.getName());
+       std.getInfo();
        std1.getInfo();
+       std2.getInfo();
+       std3.getInfo();
     }
 }

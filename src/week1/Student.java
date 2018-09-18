@@ -35,10 +35,10 @@ public class Student {
      */
     Student() {
         // TODO:
-        System.out.println("Student");
-        System.out.println("000");
-        System.out.println("INT22041");
-        System.out.println("uet@vnu.edu.vn");
+        name = "Student";
+        id = "000";
+        group = "INT22041";
+        email = "uet@vnu.edu.vn";
     }
 
     /**
@@ -49,6 +49,10 @@ public class Student {
      */
     Student(String n, String sid, String em) {
         // TODO:
+        name = n;
+        id = sid;
+        email = em;
+        group = "INT22041";
     }
 
     /**
@@ -57,6 +61,10 @@ public class Student {
      */
     Student(Student s) {
         // TODO:
+        this.name = s.name;
+        this.id = s.id;
+        this.group = s.group;
+        this.email = s.email;
     }
 
     void getInfo() {
