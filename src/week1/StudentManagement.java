@@ -13,7 +13,27 @@ public class StudentManagement {
 
     void studentsByGroup() {
         // TODO:
-
+        for(int i=0;i<students.length-1;i++){
+            for(int j=0;j<students.length;j++){
+                if(students[i].getGroup().compareTo(students[j].getGroup())<0){
+                    Student T = new Student();
+                    T = students[i];
+                    students[i] = students[j];
+                    students[j] = T;
+                }
+            }
+        }
+    String group = " ";
+        int i=0, n=students.length;
+        while(i<n){
+            if(students[i].getGroup().equals(group) == false) {
+                group = students[i].getGroup();
+                System.out.println("Danh sach sinh vien lop " + group +": ");
+                System.out.println(students[i]);
+            }
+            else  System.out.println(students[i]);
+            i++;
+        }
     }
 
     void removeStudent(String id) {
