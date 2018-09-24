@@ -8,7 +8,7 @@ public class StudentManagement {
 
     public static boolean sameGroup(Student s1, Student s2) {
         // TODO:
-     return (s1.getGroup().equals(s2.getGroup()));
+     return s1.getGroup().equals(s2.getGroup());
     }
 
     void studentsByGroup() {
