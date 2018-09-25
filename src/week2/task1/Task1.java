@@ -5,8 +5,11 @@ public class Task1 {
 
     public static int UCLN(int a, int b) {
             // TODO: Tính ước chung lớn nhất của 2 số a, b
-            if(a==b) return a;
+            if(a==0 || b==0) return a+b;
+            else  if(a==b) return a;
             else {
+                if(a<0) a=-a;
+                if(b<0) b=-b;
                 if(a>b) a=a-b;
                 else  b=b-a;
             }

@@ -45,9 +45,9 @@ public class Fraction {
         // TODO: Phương thức trừ hai phân số (this và other), trả về đối tượng Fraction mới
         int a = (this.numerator * other.denominator) - (this.denominator * other.numerator);
         int b = this.denominator * other.denominator;
-        Fraction y = new Fraction(a,b);
-        y.Minimals();
-        return y;
+            Fraction y = new Fraction(a, b);
+            y.Minimals();
+            return y;
     }
 
     public Fraction multiply(Fraction other) {
@@ -67,14 +67,30 @@ public class Fraction {
         t.Minimals();
         return t;
     }
+    public boolean equals( Fraction other){
+        this.Minimals();
+        other.Minimals();
+        return (this.numerator == other.getNumerator() && this.denominator == other.getDenominator());
+    }
+
+
     public static void main(String[] args){
-        Fraction fraction1 = new Fraction(1,4);
-        Fraction fraction2 = new Fraction(1,4);
+
+        Fraction fraction1 = new Fraction(-3,4);
+        Fraction fraction2 = new Fraction(-3,4);
         Fraction add = fraction1.add(fraction2);
         System.out.println("Phan so moi sau cong la: " + add.getNumerator() + "/" + add.getDenominator());
 
+        Fraction subtract = fraction1.subtract(fraction2);
+        System.out.println("Phan so moi sau tru la: " + subtract.getNumerator() + "/" + subtract.getDenominator());
+
         Fraction multiply = fraction1.multiply(fraction2);
         System.out.println("Phan so moi sau nhan la: " + multiply.getNumerator() + "/" + multiply.getDenominator());
+
+        Fraction divide = fraction1.divide(fraction2);
+        System.out.println("Phan so moi sau chia la: " + divide.getNumerator() + "/" + divide.getDenominator());
+
+        System.out.println(fraction1.equals(fraction2));
     }
 }
 
