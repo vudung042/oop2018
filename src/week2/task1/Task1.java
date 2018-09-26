@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Task1 {
 
-    public static int UCLN(int a, int b) {
+    public static int gcd(int a, int b) {
             // TODO: Tính ước chung lớn nhất của 2 số a, b
             if(a==0 || b==0) return a+b;
             else  if(a==b) return a;
@@ -13,7 +13,7 @@ public class Task1 {
                 if(a>b) a=a-b;
                 else  b=b-a;
             }
-        return UCLN(a,b);
+        return gcd(a,b);
     }
 
     public static int fibonacci(int n) {
@@ -34,7 +34,7 @@ public class Task1 {
         a = scanner.nextInt();
         System.out.println("Nhap vao b: ");
         b = scanner.nextInt();
-        System.out.println("Uoc chung lon nhat cua " +a+ " va " +b+" la: "+ UCLN(a,b));
+        System.out.println("Uoc chung lon nhat cua " +a+ " va " +b+" la: "+ gcd(a,b));
 
         System.out.println("Nhap vao n: ");
         n = scanner.nextInt();

@@ -28,7 +28,7 @@ public class Fraction {
 
 
     public void Minimals(){
-        int i = Task1.UCLN(this.getNumerator(),this.getDenominator());
+        int i = Task1.gcd(this.getNumerator(),this.getDenominator());
         this.setNumerator(this.getNumerator() / i);
         this.setDenominator(this.getDenominator() / i);
     }
