@@ -67,7 +67,8 @@ public class Fraction {
         t.Minimals();
         return t;
     }
-    public boolean equals( Fraction other){
+    public boolean equals( Object obj){
+        Fraction other = (Fraction) obj;
         this.Minimals();
         other.Minimals();
         return (this.numerator == other.getNumerator() && this.denominator == other.getDenominator());
