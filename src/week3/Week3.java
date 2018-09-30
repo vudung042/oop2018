@@ -9,13 +9,12 @@ public class Week3 {
         else return n;
     }
 
-    public static int minOfArray(int[] array, int n) {
+    public static int minOfArray(int[] array) {
         // TODO: Tìm giá trị nhỏ nhất của của một mảng số nguyên (kích thước mảng <= 100 phần tử)
-        int i=0, min=array[0];
-        while ( n > 100){
-
+        int i, min=array[0];
+        int n = array.length;
+        for( i = 0; i < n; i++){
             if(min>array[i]) min= array[i];
-            i++;
         }
         return min;
     }
@@ -46,13 +45,13 @@ public class Week3 {
         System.out.println("So lon trong hai so la: " + max(m,n));
 
         int[] arrayx = new int[100];
-        int i,k;
+        int i, k;
         System.out.println("Nhap vao so phan tu mang :");
         k = scanner.nextInt();
         for (i=0;i<k;i++){
             arrayx[i] = scanner.nextInt();
         }
-        System.out.println("Gia tri nho nhat cua mang: " + minOfArray(arrayx,k));
+        System.out.println("Gia tri nho nhat cua mang: " + minOfArray(arrayx));
 
         double weight, height;
         System.out.println("Nhap vao can nang: ");
