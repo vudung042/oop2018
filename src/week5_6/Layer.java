@@ -1,13 +1,14 @@
 package week5_6;
 
-import java.util.Vector;
+import java.util.ArrayList;
 
-    public class Layer extends Vector<Shape> {
-
+    
+    public class Layer  {
+       ArrayList<Shape> shapes = new ArrayList<Shape>();
         public void deleteTriagle (){
-            for (int i=0;i<this.size();i++){
-                if (this.elementAt(i) instanceof Triangle){
-                    this.remove(i);
+            for (int i=0;i<shapes.size();i++){
+                if (shapes.get(i) instanceof Triangle){
+                    shapes.remove(i);
                     i--;
                 }
             }

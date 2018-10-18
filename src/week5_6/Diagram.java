@@ -1,14 +1,16 @@
 package week5_6;
 
-import java.util.Vector;
+import java.util.ArrayList;
 
-public class Diagram extends Vector<Layer>
-{
+
+public class Diagram 
+{   
+    ArrayList<Layer> layers = new ArrayList<Layer>();
     public void deleteCircle (){
-        for (int i=0;i<this.size();i++){
-            for (int j=0;j<this.elementAt(i).size();j++)
-                if (this.elementAt(i).elementAt(j) instanceof Circle){
-                    this.elementAt(i).remove(j);
+        for (int i=0;i<layers.size();i++){
+            for (int j=0;j<layers.get(i).shapes.size();j++)
+                if (layers.get(i).shapes.get(j) instanceof Circle){
+                    layers.get(i).shapes.remove(j);
                     j--;
                 }
         }
