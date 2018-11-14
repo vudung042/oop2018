@@ -7,7 +7,7 @@ public class Task2 {
         double[] a = new double[2000];
         Random rd = new Random();
         for(int i=0;i<1000;i++) {
-            a[i] = rd.nextDouble();
+            a[i] = rd.nextDouble() * (-20 + rd.nextInt(100));
         }
         for(int i = 0; i<1000; i++) {
             for (int j = i; j < 1000; j++) {
